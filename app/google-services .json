@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "638612789152",
+    "project_id": "cataloguer2",
+    "storage_bucket": "cataloguer2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:638612789152:android:9c76009c440d9fc99676c5",
+        "android_client_info": {
+          "package_name": "com.example.cataloguerpoe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "638612789152-79brl6nddcldtp3411kemkc6anao4lr8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4EncWsHnHQSg_KsZurCHndEGvFLAJLpA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "638612789152-79brl6nddcldtp3411kemkc6anao4lr8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
