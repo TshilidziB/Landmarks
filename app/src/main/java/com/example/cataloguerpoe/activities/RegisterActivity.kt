@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.view.WindowInsets
 import android.view.WindowManager
+import com.example.cataloguerpoe.models.User
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.AuthResult
@@ -129,11 +130,22 @@ class RegisterActivity : BaseActivity() {
 
                             // Firebase registered user
                             val firebaseUser: FirebaseUser = task.result!!.user!!
+                            val user = User(
+                                firebaseUser.uid,
+                                et_first_name.text.toString().trim { it <= ' ' },
+                                et_last_name.text.toString().trim { it <= ' ' },
+                                etr_email.text.toString().trim { it <= ' ' }
+
+
+
+                            )
 
                             showErrorSnackBar(
                                 "You are registered successfully. Your user id is ${firebaseUser.uid}",
                                 false
                             )
+                            FirebaseAuth.getInstance().signOut()
+                            finish()
                         } else {
                             // If the registering is not successful then show error message.
                             showErrorSnackBar(task.exception!!.message.toString(), true)
